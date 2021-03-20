@@ -49,7 +49,9 @@ def zoom_effect(ax_zoomed, ax_origin, xlims = None, orientation='below', **kwarg
         bbox_origin=TransformedBbox(Bbox.from_extents(xlims[0], 0, xlims[1], 1), transform_origin)
 
     prop_patches = kwargs.copy()
-    prop_patches["ec"] = "none"
+    prop_patches["edgecolor"] = "none"
+    prop_patches["facecolor"] = "none"
+    
     prop_patches["alpha"] = 0.2
 
     if orientation=='below':
